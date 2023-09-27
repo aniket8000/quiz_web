@@ -1,0 +1,164 @@
+/* Apply styles to the yellow top section */
+body{
+margin: 0;
+padding: 0;
+}
+.yellow-top-section {
+    background-color: rgb(247, 210, 4);
+    text-align: center;
+    color: #333; /* Text color */
+    font-size: 24px; /* Adjust font size as needed */
+    font-weight: bold; /* Make the text bold */
+    border-bottom-left-radius: 20px; /* Rounded bottom-left corner */
+    border-bottom-right-radius: 20px; /* Rounded bottom-right corner */
+    overflow: hidden; /* Hide overflow content */
+    height: 30vh; /* Set the height to 30% of the viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    background-color: rgb(247, 210, 4);
+    position: relative;
+    overflow: hidden;
+    
+
+}
+.yellow-wave {
+    position: relative;
+    overflow: hidden;
+    background-color: rgb(247, 210, 4);
+}
+.yellow-wave::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: linear-gradient(90deg, transparent, #ffc107, transparent);
+    animation: wave 2s ease-in-out infinite;
+}
+
+
+@keyframes wave {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+
+
+/* Style the boxes container within the yellow section */
+.boxes-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%; /* Occupy the full width of the parent container */
+}
+
+/* Style the boxes within the yellow section */
+.box {
+    background-color: #f9f9f9; /* Background color for boxes */
+    padding: 35px;
+    border-radius: 10px; /* Rounded corners for boxes */
+    width: 100px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+    box-shadow: 5px 5px grey;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.box:hover {
+    background-color: #ddd;
+    transform: scale(1.05); 
+}
+
+/* Style the content area */
+.content {
+    padding: 20px;
+    background-color: #f9f9f9; /* Background color for the content area */
+    
+}
+
+/* Style the outer boxes container */
+.outer-boxes-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Create 3 columns */
+    gap: 20px; /* Spacing between boxes */
+    justify-items: center; /* Center items horizontally */
+}
+
+/* Style the outer boxes */
+.outer-box {
+    background-color: #f9f9f9; /* Background color for outer boxes */
+    width: 180px;
+    height: 180px; /* Square dimensions */
+    border: 1px solid #333; /* Border for outer boxes */
+    text-align: center;
+    line-height: 100px; /* Center content vertically */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+    border-color: rgb(247, 210, 4);
+    box-shadow: 5px 5px grey;
+    border-radius: 25px;
+}
+
+
+/* Add a hover effect for outer boxes */
+.outer-box:hover {
+    
+    transform: scale(1.05); /* Scale up the box slightly on hover */
+    
+}
+/* Styles for the outer boxes container */
+.outer-boxes-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Create 3 columns */
+    gap: 20px; /* Spacing between boxes */
+    justify-items: center; /* Center items horizontally */
+}
+
+
+/* Styles for the images inside the outer boxes */
+.outer-box img {
+    max-width: 100%; /* Ensure the image doesn't exceed the box dimensions */
+    max-height: 100%; /* Ensure the image doesn't exceed the box dimensions */
+    height: auto;
+}
+
+/* Styles for the overlay (category name) */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background color for overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease;
+}
+
+/* Styles for the category name inside the overlay */
+.overlay h2 {
+    color: white;
+    font-size: 16px;
+}
+
+/* Add a hover effect for outer boxes to show the overlay */
+.outer-box:hover {
+    background-color: #ddd; /* Background color on hover */
+    transform: scale(1.05); /* Scale up the box slightly on hover */
+}
+
+/* Show the overlay on hover */
+.outer-box:hover .overlay {
+    opacity: 1;
+}
+
