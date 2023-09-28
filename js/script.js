@@ -97,7 +97,7 @@ function showQuetions(index){
     let option_tag = '<div class="option"><span>'+ questions[index].incorrect_answers[0] +'</span></div>'
     + '<div class="option"><span>'+ questions[index].incorrect_answers[1] +'</span></div>'
     + '<div class="option"><span>'+ questions[index].incorrect_answers[2] +'</span></div>'
-    + '<div class="option"><span>'+ questions[index].answer +'</span></div>';
+    + '<div class="option"><span>'+ questions[index].correct_answer +'</span></div>';
     que_text.innerHTML = que_tag; //adding new span tag inside que_tag
     option_list.innerHTML = option_tag; //adding new div tag inside option_tag
     
@@ -117,7 +117,7 @@ function optionSelected(answer){
     clearInterval(counter); //clear counter
     clearInterval(counterLine); //clear counterLine
     let userAns = answer.textContent; //getting user selected option
-    let correcAns = questions[que_count].answer; //getting correct answer from array
+    let correcAns = questions[que_count].correct_answer; //getting correct answer from array
     const allOptions = option_list.children.length; //getting all option items
     
     if(userAns == correcAns){ //if user selected option is equal to array's correct answer

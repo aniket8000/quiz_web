@@ -1,14 +1,15 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="stylesheet" href="../css/style1.css">
+
+    <link rel="stylesheet" href="../css/history.css">
     <!-- FontAweome CDN Link for Icons-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 </head>
+
 <body>
     <!-- start Quiz button -->
     <div class="start_btn"><button>Start Quiz</button></div>
@@ -40,29 +41,11 @@
             <div class="time_line"></div>
         </header>
         <section>
-            <div id="quiz-container">
-                <h2>Category: Entertainment: Music</h2>
-                <p>Type: Multiple Choice</p>
-                <p>Difficulty: Medium</p>
-                <p>Question: Who had a US and UK number 1 hit in 1962 with the instrumental, 'Telstar'?</p>
-                <ul>
-                    <li>
-                        <input type="radio" name="answer" value="The Tornados" id="option1">
-                        <label for="option1">The Tornados</label>
-                    </li>
-                    <li>
-                        <input type="radio" name="answer" value="The Ventures" id="option2">
-                        <label for="option2">The Ventures</label>
-                    </li>
-                    <li>
-                        <input type="radio" name="answer" value="The Spotnicks" id="option3">
-                        <label for="option3">The Spotnicks</label>
-                    </li>
-                    <li>
-                        <input type="radio" name="answer" value="The Tremeloes" id="option4">
-                        <label for="option4">The Tremeloes</label>
-                    </li>
-                </ul>
+            <div class="que_text">
+                <!-- Here I've inserted question from JavaScript -->
+            </div>
+            <div class="option_list">
+                <!-- Here I've inserted options from JavaScript -->
             </div>
         </section>
 
@@ -87,16 +70,16 @@
         <div class="buttons">
             <button class="restart">Replay Quiz</button>
             <button class="quit">Quit Quiz</button>
-            <button class="share">
-            <a href="emform.html">Share Answers</a></button>
+            
         </div>
     </div>
 
     <!-- Inside this JavaScript file I've inserted Questions and Options only -->
-    <script src="../js/questions1.js"></script>
+    <script src="../js/space.js"></script>
 
     <!-- Inside this JavaScript file I've coded all Quiz Codes -->
-    <script src="../js/script1.js"></script>
+    <script src="../js/script.js"></script>
 
 </body>
+
 </html>
